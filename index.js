@@ -13,15 +13,14 @@ var config = nodeplayerConfig.getConfig(MODULE_NAME, defaultConfig);
 
 exports.init = function(player, logger, callback) {
     // dependencies
-    if (!player.app) {
-        callback('module must be initialized after expressjs module!');
+    if (!player.plugins['plugin-express']) {
+        callback('module must be initialized after express module!');
     } else {
         var basic = auth.basic({
                 realm: 'nodeplayer'
             }, function(username, password, callback) {
                 callback(username === config.username && password === config.password);
-            }
-        );
+            });
 
         _.each(config.paths, function(path) {
             player.app.use(path, auth.connect(basic));
