@@ -1,6 +1,6 @@
 {
   "name": "nodeplayer-plugin-httpauth",
-  "version": "0.1.97",
+  "version": "0.1.99",
   "description": "Provides HTTP basic authentication for configurable expressjs paths",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,6 @@
   "homepage": "https://github.com/FruitieX/nodeplayer-plugin-httpauth",
   "dependencies": {
     "http-auth": "^2.2.5",
-    "nodeplayer-config": "*",
     "underscore": "^1.8.2"
   }
 }
