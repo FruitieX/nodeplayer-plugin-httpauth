@@ -13,7 +13,7 @@ var config = nodeplayerConfig.getConfig(MODULE_NAME, defaultConfig);
 
 exports.init = function(player, logger, callback) {
     // dependencies
-    if (!player.plugins['express']) {
+    if (!player.plugins.express) {
         callback('module must be initialized after express module!');
     } else {
         var basic = auth.basic({
